@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">alias_v_0_3_1</string>
+    <!--ACTIVITY CHOOSE TEAM-->
+    <!--ACTIVITY CHOOSE TEAM-->
+    <string name="choose_team_btn_bottoms_start">старт</string>
+    <string name="choose_team_tv_top_text">Выберите Команду</string>
+
+    <!--ACTIVITY GAME-->
+    <string name="game_btn_show_score_text">показать\nсчет</string>
+
+
+
+
+
+    <string-array name="words">
+        <item>Абонент</item>
+        <item>Абрикос</item>
+        <item>Абсурд</item>
+        <item>Авария</item>
+        <item>Август</item>
+        <item>Автобус</item>
+        <item>Автомобиль</item>
+        <item>Авторитет</item>
+        <item>Агония</item>
+
+        <item>Баба</item>
+        <item>Бабник</item>
+        <item>Бабочка</item>
+        <item>База</item>
+        <item>Базар</item>
+        <item>Багаж</item>
+        <item>Бак</item>
+        <item>Бактерия</item>
+        <item>Бал</item>
+        <item>Балаган</item>
+        <item>Баланс</item>
+        <item>Балет</item>
+        <item>Балка</item>
+        <item>Балкон</item>
+        <item>Баллада</item>
+        <item>Балласт</item>
+        <item>Баллон</item>
+        <item>Бальзам</item>
+
+        <item>Вагон</item>
+        <item>Вагонетка</item>
+        <item>Ваза</item>
+        <item>Вазелин</item>
+        <item>Вакцина</item>
+        <item>Вал</item>
+        <item>Валенки</item>
+        <item>Валерьянка</item>
+        <item>Валет</item>
+        <item>Валун</item>
+        <item>Валюта</item>
+        <item>Вампир</item>
+        <item>Вандализм</item>
+        <item>Ванна</item>
+        <item>Варвар</item>
+        <item>Вареники</item>
+        <item>Варенье</item>
+        <item>Вариант</item>
+        <item>Ватка</item>
+        <item>Вафля</item>
+        <item>Вахта</item>
+
+        <item>Гавань</item>
+        <item>Гадость</item>
+        <item>Гадюка</item>
+        <item>Газировка</item>
+        <item>Гайка</item>
+        <item>Галерея</item>
+        <item>Галоп</item>
+        <item>Гараж</item>
+        <item>Гарантия</item>
+        <item>Гармония</item>
+        <item>Гармошка</item>
+        <item>Гарнизон</item>
+
+        <item>Давка</item>
+        <item>Давление</item>
+        <item>Даль</item>
+        <item>Дама</item>
+        <item>Дамба</item>
+        <item>Дантист</item>
+        <item>Дар</item>
+        <item>Дверь</item>
+        <item>Двигатель</item>
+        <item>Движение</item>
+
+        <item>Евнух</item>
+        <item>Еврей</item>
+        <item>Европа</item>
+        <item>Еда</item>
+        <item>Единорог</item>
+        <item>Ежевика</item>
+        <item>Ель</item>
+        <item>Енот</item>
+        <item>Ералаш</item>
+        <item>Ересь</item>
+        <item>Еретик</item>
+
+        <item>Жаба</item>
+        <item>Жабры</item>
+        <item>Жадина</item>
+        <item>Жажда</item>
+        <item>Жалоба</item>
+        <item>Жанр</item>
+        <item>Жара</item>
+        <item>Жаргон</item>
+        <item>Жасмин</item>
+        <item>Жвачка</item>
+        <item>Жгут</item>
+        <item>Жезл</item>
+        <item>Желание</item>
+        <item>Желе</item>
+        <item>Железа</item>
+        <item>Железо</item>
+        <item>Желток</item>
+        <item>Жемчуг</item>
+        <item>Желатин</item>
+        <item>Жена</item>
+
+        <item>Забава</item>
+        <item>Забастовка</item>
+        <item>Забег</item>
+        <item>Заболевание</item>
+        <item>Забор</item>
+        <item>Забота</item>
+
+        <item>Игла</item>
+        <item>Игра</item>
+        <item>Идеал</item>
+        <item>Идея</item>
+        <item>Иероглиф</item>
+        <item>Изба</item>
+
+        <item>Кабак</item>
+        <item>Кабан</item>
+        <item>Кабачок</item>
+        <item>Кабель</item>
+        <item>Кабина</item>
+        <item>Каблук</item>
+        <item>Кагор</item>
+        <item>Кадр</item>
+        <item>Кадык</item>
+        <item>Казак</item>
+        <item>Казан</item>
+        <item>Казино</item>
+        <item>Казна</item>
+        <item>Казнь</item>
+        <item>Какао</item>
+
+
+        <item>Дерево</item>
+        <item>Олень</item>
+        <item>Шарик</item>
+        <item>Нос</item>
+        <item>Шерсть</item>
+        <item>Повидло</item>
+        <item>Носок</item>
+        <item>Кизил</item>
+        <item>Кукушка</item>
+    </string-array>
+
+
+
+</resources>

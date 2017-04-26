@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.enjoy.alias_v_0_3_1.Game">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/myTransparent"
+        android:id="@+id/gameTutorialLayout"
+        android:visibility="gone"
+        android:translationZ="@dimen/translation_z_10">
+
+        <Button
+            android:layout_width="@dimen/game_btn_show_score_width"
+            android:layout_height="@dimen/game_btn_show_score_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:background="@drawable/icon_eye"
+            android:visibility="gone"
+            android:id="@+id/btnShowScoreTutorial"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tutorial_tv_text_size"
+            android:text=""
+            android:id="@+id/gameTutorialText"
+            android:layout_above="@+id/gameTutorialButtonTeam"
+            android:gravity="center_horizontal"/>
+        <ImageView
+            android:layout_width="@dimen/tutorial_iv_size"
+            android:layout_height="@dimen/tutorial_iv_size"
+            android:background="@drawable/yes"
+            android:id="@+id/gameTutorialIV"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_below="@+id/gameTutorialButtonTeam"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:layout_width="@dimen/size_0dp"
+            android:layout_height="@dimen/size_0dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/gameTutorialButtonTeam"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/game_small_score_height_300dp"
+        android:id="@+id/RLSmallScore"
+        android:background="@color/myTransparent"
+        android:translationZ="@dimen/translation_z_20"
+        android:visibility="gone">
+
+        <include layout="@layout/content_players"/>
+
+        <ImageView
+            android:layout_width="@dimen/game_small_score_arrow_width"
+            android:layout_height="@dimen/game_small_score_arrow_height"
+            android:background="@drawable/arrow"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:visibility="gone"
+            android:id="@+id/arrow"/>
+
+    </RelativeLayout>
+
+    <!--onStart-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:id="@+id/onStart"
+        android:background="@drawable/background_game_on_start">
+
+
+        <Button
+            android:layout_width="@dimen/game_btn_show_score_width"
+            android:layout_height="@dimen/game_btn_show_score_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_15dp"
+            android:background="@drawable/icon_eye"
+            android:translationZ="@dimen/translation_z_10"
+            android:id="@+id/btnShowScore"/>
+
+        <!--Player Icon-->
+        <Button
+            android:layout_width="@dimen/game_btn_big_team_size"
+            android:layout_height="@dimen/game_btn_big_team_size"
+            android:layout_centerInParent="true"
+            android:id="@+id/btnTeam"
+            android:layout_marginTop="@dimen/size_60dp"/>
+    </RelativeLayout>
+
+
+
+
+
+    <!--inGame-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/inGame"
+        android:background="@drawable/background_game_in_game"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/onStart">
+        <!--TUTORIAL 2-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/myTransparent"
+            android:id="@+id/gameTutorialSecondLayout"
+            android:visibility="gone"
+            android:translationZ="@dimen/translation_z_2">
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tutorial_tv_text_size"
+            android:visibility="gone"
+            android:text=""
+            android:paddingTop="16dp"
+            android:id="@+id/gameTutorialSecondText"
+            android:gravity="center_horizontal"
+            android:translationZ="@dimen/translation_z_5"/>
+        <ImageView
+            android:layout_width="@dimen/tutorial_iv_size"
+            android:layout_height="@dimen/tutorial_iv_size"
+            android:visibility="gone"
+            android:background="@drawable/yes"
+            android:id="@+id/gameTutorialSecondIV"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_below="@+id/gameTutorialSecondText"
+            android:layout_centerHorizontal="true"
+            android:translationZ="@dimen/translation_z_5"
+            />
+        <!--ВРЕМЯ-->
+        <TextView
+            android:id="@+id/time_display_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:text="50"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:translationZ="4dp"/>
+        <RelativeLayout
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:background="#ffffff"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="195dp"
+            android:id="@+id/time_display_box_RL"
+            android:layout_centerHorizontal="true"
+            android:translationZ="3dp"/>
+
+
+        <TextView
+            android:text="Слова"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/time_display_box"
+            android:layout_marginTop="60dp"
+            android:id="@+id/tvWords"
+            android:gravity="center"
+            android:textSize="45sp"
+            android:layout_centerHorizontal="true"
+            android:translationZ="4dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tvWords_RL"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:layout_below="@id/time_display_box"
+            android:translationZ="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:text="Слова"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#00ffffff"
+                android:id="@+id/twSubWords"
+                android:gravity="center"
+                android:textSize="45sp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/coinRL"
+            android:layout_below="@+id/tvWords"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:translationZ="1dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:visibility="visible"
+                android:background="@drawable/coin_empty"
+                android:id="@+id/coinImage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:id="@+id/tvScore"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:textColor="@color/my"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gameButtonWrongRL"
+            android:visibility="gone"
+            android:translationZ="1dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_no1"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_no2"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_no3"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_no4"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_no5"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/button_no"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btnWrong"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gameButtonRightRL"
+            android:visibility="gone"
+            android:translationZ="1dp">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_yes1"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_yes2"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_yes3"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_yes4"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="76dp"
+                android:id="@+id/coin_yes5"
+                android:visibility="visible"
+                android:background="@drawable/coin"/>
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/button_yes"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+
+                android:translationZ="1dp"
+                android:id="@+id/btnRight"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/icon_bear"
+            android:id="@+id/teamIconAfterGame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="45dp"
+            android:layout_below="@id/teamIconAfterGame"
+            android:orientation="horizontal"
+            android:id="@+id/layoutProgressBar"
+            android:visibility="gone"
+            android:gravity="top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textSize="40sp"
+                android:textColor="@color/my"
+                android:textStyle="bold"
+                android:id="@+id/tvResultScore"
+                android:layout_marginTop="-5dp"
+                android:layout_marginEnd="10dp"/>
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/progress_bar_style"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:indeterminate="false"
+                android:stepSize="1.0"
+                android:max="50"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/maxScore"
+                android:textSize="40sp"
+                android:textColor="@color/my"
+                android:textStyle="bold"
+                android:layout_marginTop="-5dp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="90dp"
+        android:background="@drawable/button_unpressed"
+        android:text="Старт"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:id="@+id/bottomButton"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"
+
+        android:translationZ="5dp"/>
+
+    <!--&lt;!&ndash;onFinish&ndash;&gt;-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/onFinishInclude"-->
+        <!--android:visibility="gone"-->
+        <!--android:background="@drawable/background_choose_team">-->
+        <!--<TextView-->
+            <!--android:text="Общее слово"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="40sp"-->
+            <!--android:id="@+id/myTitle"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:textColor="@android:color/holo_red_light"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_below="@+id/myTitle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text=""-->
+            <!--android:textSize="30sp"-->
+            <!--android:id="@+id/tvFinalWord"/>-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="350dp"-->
+            <!--android:layout_below="@id/tvFinalWord">-->
+            <!--<include layout="@layout/content_players"/>-->
+
+        <!--</RelativeLayout>-->
+        <!--<ImageView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_marginEnd="35dp"-->
+            <!--android:layout_marginBottom="76dp"-->
+            <!--android:id="@+id/coin_final"-->
+            <!--android:background="@drawable/coin"/>-->
+
+        <!--<Button-->
+            <!--android:layout_width="225dp"-->
+            <!--android:layout_height="90dp"-->
+            <!--android:background="@drawable/button_unpressed"-->
+            <!--android:text="Никому"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="40sp"-->
+            <!--android:textStyle="bold"-->
+            <!--android:id="@+id/btnNone"-->
+            <!--android:textColorLink="@color/myBlack"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="20dp"/>-->
+
+    <!--</RelativeLayout>-->
+
+
+</RelativeLayout>

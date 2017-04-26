@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_result"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.enjoy.alias_v_0_3_1.Result">
+
+    <!--Score-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/LLScore"
+        android:visibility="visible"
+        android:background="@drawable/background_game_on_start">
+
+        <TextView
+            android:text="ПОБЕДИТЕЛЬ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="45sp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/btnTeam"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/myBlack"
+            android:id="@+id/tvWinner"
+            android:visibility="visible"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/btnTeam"/>
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/btnTeam"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:visibility="visible"
+                android:background="@drawable/coin_empty"
+                android:id="@+id/coinImage"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:id="@+id/tvScore"
+                android:visibility="visible"
+                android:layout_centerInParent="true"
+                android:textColor="@color/my"/>
+        </RelativeLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:layout_marginStart="45dp"-->
+            <!--android:layout_marginEnd="45dp"-->
+            <!--android:layout_below="@id/btnTeam"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:id="@+id/layoutProgressBar"-->
+            <!--android:gravity="top">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="50"-->
+                <!--android:textSize="40sp"-->
+                <!--android:textColor="@color/my"-->
+                <!--android:textStyle="bold"-->
+                <!--android:id="@+id/tvResultScore"-->
+                <!--android:layout_marginTop="-5dp"-->
+                <!--android:layout_marginEnd="10dp"/>-->
+            <!--<ProgressBar-->
+                <!--android:id="@+id/progressBar"-->
+                <!--style="?android:attr/progressBarStyleHorizontal"-->
+                <!--android:progressDrawable="@drawable/progress_bar_style"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:indeterminate="false"-->
+                <!--android:stepSize="1.0"-->
+                <!--android:max="50"-->
+                <!--android:layout_weight="1"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="50"-->
+                <!--android:textSize="40sp"-->
+                <!--android:textColor="@color/my"-->
+                <!--android:textStyle="bold"-->
+                <!--android:layout_marginTop="-5dp"-->
+                <!--android:layout_marginStart="10dp"/>-->
+
+        <!--</LinearLayout>-->
+
+    </RelativeLayout>
+
+    <!--WINNER-->
+
+
+
+
+
+
+
+    <!--&lt;!&ndash;FinalScore&ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:id="@+id/LLFinalScore"-->
+        <!--android:visibility="gone">-->
+        <!--<TextView-->
+            <!--android:text="Таблица счета:"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:textSize="30sp"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="10dp"/>-->
+
+        <!--<include layout="@layout/content_players"/>-->
+    <!--</LinearLayout>-->
+
+
+    <Button
+        android:layout_width="225dp"
+        android:layout_height="90dp"
+        android:background="@drawable/button_unpressed"
+        android:text="Далее"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:id="@+id/btnPlayAgain"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="36dp"/>
+
+</RelativeLayout>

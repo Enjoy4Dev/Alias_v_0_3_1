@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_score_table"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.enjoy.alias_v_0_3_1.ScoreTable"
+    android:background="@drawable/background_choose_team">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/background_ribbons"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:text="Общее слово"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:id="@+id/myTitle"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/holo_red_light"
+            android:visibility="visible"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvFinalWord"
+            android:visibility="visible"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <include layout="@layout/content_players"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="225dp"
+            android:layout_height="90dp"
+            android:background="@drawable/button_unpressed"
+            android:text="Никому"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:id="@+id/btnNone"
+            android:textColorLink="@color/myBlack"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_team"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.enjoy.alias_v_0_3_1.ChooseTeam"
+    android:background="@drawable/background_choose_team">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/myTransparent"
+        android:id="@+id/chooseTeamTutorialLayout"
+        android:visibility="gone"
+        android:translationZ="@dimen/translation_z_10">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/tutorial_tv_text_size"
+            android:text=""
+            android:id="@+id/chooseTeamTutorialText"
+            android:gravity="center_horizontal"/>
+        <ImageView
+            android:layout_width="@dimen/tutorial_iv_size"
+            android:layout_height="@dimen/tutorial_iv_size"
+            android:background="@drawable/yes"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_below="@+id/chooseTeamTutorialText"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvChooseTeam"
+            android:text="@string/choose_team_tv_top_text"
+            android:textSize="@dimen/choose_team_tv_top_text_size"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/choose_team_rl_content_players_height">
+            <include layout="@layout/content_players"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_horizontal">
+            <Button
+                android:layout_width="@dimen/button_bottom_width"
+                android:layout_height="@dimen/button_bottom_height"
+                android:background="@drawable/button_unpressed"
+                android:text="@string/choose_team_btn_bottoms_start"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/button_bottom_text_size"
+                android:textStyle="bold"
+                android:id="@+id/btnStart"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

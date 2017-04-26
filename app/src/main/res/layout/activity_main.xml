@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.enjoy.alias_v_0_3_1.MainActivity">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/testTutorialButton"
+        android:text="Tutorial"/>
+
+
+    <ImageView
+    android:id="@+id/flat_circle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main_activity_cropped"/>
+
+
+
+    <ImageView
+        android:layout_width="@dimen/main_logo_width"
+        android:layout_height="@dimen/main_logo_height"
+        android:background="@drawable/logo_alias"
+        android:id="@+id/logoAlias"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/main_logo_margin_top" />
+
+    <Button
+        android:layout_width="@dimen/button_bottom_width"
+        android:layout_height="@dimen/button_bottom_height"
+        android:background="@drawable/button_unpressed"
+        android:text="играть"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/button_bottom_text_size"
+        android:textStyle="bold"
+        android:id="@+id/myButton"
+        android:textColorLink="@color/myBlack"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/button_bottom_margin_bottom"
+        android:translationZ="@dimen/translation_z_5"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/myTransparent"
+        android:id="@+id/mainActivityTutorialLayout"
+        android:visibility="gone"
+        android:translationZ="@dimen/translation_z_2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tutorial_tv_text_size"
+                android:text=""
+                android:id="@+id/mainActivityTutorialText"
+                android:gravity="center_horizontal"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="@dimen/tutorial_iv_size"
+                    android:layout_height="@dimen/tutorial_iv_size"
+                    android:background="@drawable/no"
+                    android:id="@+id/mainActivityTutorialButtonDisagree"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+                <Button
+                    android:layout_width="@dimen/tutorial_iv_size"
+                    android:layout_height="@dimen/tutorial_iv_size"
+                    android:background="@drawable/yes"
+                    android:id="@+id/mainActivityTutorialButtonAgree"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
